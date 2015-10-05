@@ -1,0 +1,67 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+GenerateOrderingCodeForms
+</name>
+</assembly>
+<members>
+<member name="P:GenerateOrderingCodeForms.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:GenerateOrderingCodeForms.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="P:GenerateOrderingCodeForms.My.Resources.Resources.BeginCode">
+	<summary>
+  Looks up a localized string similar to #include	&lt;sys/types.h&gt;
+#include	&lt;sys/wait.h&gt;
+#include	&lt;errno.h&gt;		
+#include	&lt;stdarg.h&gt;
+#include	"ourhdr.h"
+
+char	*pname = NULL;		/* caller can set this from argv[0] */
+void pr_exit(int);
+static void err_doit(int, const char *, va_list);
+
+int main(void)
+{
+.
+</summary>
+</member><member name="P:GenerateOrderingCodeForms.My.Resources.Resources.EndCode">
+	<summary>
+  Looks up a localized string similar to 	exit(0);
+}
+
+
+void pr_exit(int status)
+{
+	if (WIFEXITED(status))
+		printf("Exit status = %d\n",
+				WEXITSTATUS(status));
+	else if (WIFSIGNALED(status))
+		printf("abnormal termination, signal number = %d%s\n",
+				WTERMSIG(status),
+#ifdef	WCOREDUMP
+				WCOREDUMP(status) ? " (core file generated)" : "");
+#else
+				"");
+#endif
+	else if (WIFSTOPPED(status))
+		printf("child stopped, signal number = %d\n",
+				WSTOPSIG(status));
+}
+
+/* Fatal error related to a system call.
+ * Print a messag [rest of string was truncated]";.
+</summary>
+</member><member name="T:GenerateOrderingCodeForms.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+</members>
+</doc>

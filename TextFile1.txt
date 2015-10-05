@@ -1,0 +1,12 @@
+#include	<sys/types.h>
+#include	<sys/wait.h>
+#include	<errno.h>		
+#include	<stdarg.h>
+#include	"ourhdr.h"
+
+char	*pname = NULL;		/* caller can set this from argv[0] */
+void pr_exit(int);
+static void err_doit(int, const char *, va_list);
+
+int main(void)
+{
